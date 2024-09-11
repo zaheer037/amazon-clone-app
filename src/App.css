@@ -1,0 +1,351 @@
+app.css
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f3f3f3;
+    color: #333;
+}
+
+.app {
+    text-align: center;
+}
+
+.header {
+    background-color: #232f3e;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-container {
+    margin-left: 20px;
+}
+
+.logo {
+    width: 100px;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin-right: 20px;
+}
+
+.nav-list li {
+    display: inline;
+}
+
+.nav-list a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+}
+
+.nav-list a:hover {
+    background-color: #37475a;
+    border-radius: 4px;
+}
+
+main {
+    padding: 20px;
+}
+
+.form-container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    margin: 20px auto;
+}
+
+.form-container h2 {
+    margin-top: 0;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="phone"],
+input[type="number"],
+input[type="password"] {
+    width: calc(100% - 22px);
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    padding: 10px 15px;
+    background-color: #ff9900;
+    color: white;
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #e68a00;
+}
+
+.category-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.category-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+    max-width: 800px;
+    width: 100%;
+}
+
+.category-list li {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 20px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.category-list li:hover {
+    background-color: #f0f0f0;
+    transform: scale(1.05);
+}
+
+.category-list li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+    display: block;
+}
+
+.category-list li a:hover {
+    color: #ff9900;
+}
+
+.selected-category {
+    text-align: left;
+    width: 80%;
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.item-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.item {
+    background-color: white;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 200px;
+}
+
+.item-image {
+    max-width: 100%;
+    border-radius: 4px;
+}
+
+.welcome-container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    margin: 20px auto;
+}
+
+/* Footer styles */
+.footer {
+    background-color: #131921;
+    color: white;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.footer-top {
+    text-align: center;
+    padding: 10px;
+    border-bottom: 1px solid #3e3e3e;
+}
+
+.footer-top .back-to-top {
+    background-color: #232f3e;
+    padding: 10px 20px;
+    border-radius: 5px;
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+    border: none;
+}
+
+.footer-top .back-to-top:hover {
+    background-color: #37475a;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px 0;
+    text-align: left;
+}
+
+.footer-links div {
+    flex: 1;
+    max-width: 200px;
+}
+
+.footer-links h5 {
+    margin-top: 0;
+    font-size: 16px;
+    color: #ff9900;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links ul li {
+    margin: 5px 0;
+}
+
+.footer-links ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.footer-links ul li a:hover {
+    text-decoration: underline;
+}
+
+.footer-bottom {
+    text-align: center;
+    font-size: 12px;
+    padding: 10px;
+    border-top: 1px solid #3e3e3e;
+}
+
+.order-message {
+  background-color: #f0f8ff; /* Light blue background */
+  border: 1px solid #d1e7dd; /* Light green border */
+  color: #0f5132; /* Dark green text */
+  padding: 20px;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 1.2em;
+  position: absolute; /* Adjust position based on your layout */
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000; /* Ensure it appears above other content */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Optional shadow effect */
+}
+
+/* Header styles */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #232f3e; /* Amazon-like color */
+  color: #fff;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  height: 40px; /* Adjust the logo size if needed */
+}
+
+.nav-list {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-list li {
+  margin: 0 10px;
+}
+
+.nav-list a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1em;
+}
+
+.nav-list a:hover {
+  text-decoration: underline;
+}
+
+.welcome-msg {
+  color: #febd69; /* Different color for the welcome message */
+  font-weight: bold;
+}
+
+.cart-container {
+  border: 1px solid #ddd;
+  padding: 20px;
+  margin-top: 20px;
+  background-color: #f9f9f9;
+}
+
+.cart-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.cart-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.cart-item-image {
+  width: 50px;
+  height: 50px;
+  margin-right: 20px;
+}
+.styled-alert-popup {
+    border-radius: 10px;
+    padding: 20px;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .styled-alert-popup .swal2-title {
+    font-size: 1.6rem;
+    color: #e74c3c;
+  }
+  
+  .styled-alert-popup .swal2-content {
+    font-size: 1.2rem;
+    color: #333;
+  }
