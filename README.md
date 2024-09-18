@@ -1,22 +1,27 @@
-Mini Amazon Project
+# Mini Amazon Project
+
 This is a simple full-stack e-commerce web application, similar to Amazon, where users can register, log in, view products, and make purchases. The project is built using the MERN stack (MongoDB, Express.js, React.js, Node.js) and supports user authentication and item management with file upload functionality.
 
-Features
-User Authentication: Users can register, log in, and log out using Passport.js and sessions.
-Item Management: Authenticated users can view and add new items with images, names, and prices.
-Purchases: Users can buy items and the purchases are stored in the backend.
-File Uploads: Item images are uploaded using Multer and stored locally.
-Admin/User View: Admins can add items, and users can browse and purchase them.
-Tech Stack
-Frontend: React.js
-Backend: Node.js, Express.js
-Database: MongoDB (Mongoose)
-Authentication: Passport.js (Local strategy)
-File Uploads: Multer
-Session Management: Express-session
-Project Structure
-php
-Copy code
+## Features
+
+- **User Authentication**: Users can register, log in, and log out using Passport.js and sessions.
+- **Item Management**: Authenticated users can view and add new items with images, names, and prices.
+- **Purchases**: Users can buy items and the purchases are stored in the backend.
+- **File Uploads**: Item images are uploaded using Multer and stored locally.
+- **Admin/User View**: Admins can add items, and users can browse and purchase them.
+
+## Tech Stack
+
+- **Frontend**: React.js
+- **Backend**: Node.js, Express.js
+- **Database**: MongoDB (Mongoose)
+- **Authentication**: Passport.js (Local strategy)
+- **File Uploads**: Multer
+- **Session Management**: Express-session
+
+## Project Structure
+
+```
 ├── client/               # React frontend
 │   ├── public/
 │   ├── src/
@@ -35,97 +40,129 @@ Copy code
 ├── server.js             # Main Express backend file
 ├── package.json          # Backend dependencies
 └── README.md             # Project README
-Installation and Setup
-Backend Setup
-Clone the repository:
+```
 
-bash
-Copy code
-git clone https://github.com/jaheer037/amazon-clone-app.git
-Install backend dependencies:
+## Installation and Setup
 
-bash
-Copy code
-cd mini-amazon-project
-npm install
-Set up MongoDB: Make sure you have MongoDB installed and running on your local machine. The database name is set to Amazon.
+### Backend Setup
 
-Start the server:
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/jaheer037/amazon-clone-project.git
+   ```
 
-bash
-Copy code
-node server.js
-The backend will run on http://localhost:3000.
+2. Install backend dependencies:
+   ```bash
+   cd amazon-clone-project
+   npm install
+   ```
 
-Frontend Setup
-Navigate to the client folder:
+3. Set up MongoDB:
+   Make sure you have MongoDB installed and running on your local machine. The database name is set to `Amazon`.
 
-bash
-Copy code
-cd client
-Install frontend dependencies:
+4. Start the server:
+   ```bash
+   node server.js
+   ```
 
-bash
-Copy code
-npm install
-Start the React app:
+   The backend will run on `http://localhost:3000`.
 
-bash
-Copy code
-npm start
-The React frontend will run on http://localhost:3001.
+### Frontend Setup
 
-Usage
-Visit http://localhost:3001 to access the application.
-Home Page: You can view available items. If logged in, you can add items to the store.
-Register/Login: Create an account and log in to purchase items.
-Add Items: Authenticated users can add items with a name, price, and image.
-Routes
-Backend API
-GET /items: Fetch all items available in the store.
-POST /add-item: Add a new item (Admin only, requires authentication).
-POST /purchase: Purchase an item (Requires authentication).
-GET /login: Show the login form.
-POST /login: Handle user login.
-GET /register: Show the registration form.
-POST /register: Handle user registration.
-GET /logout: Log out the user.
-Models
-User
-username: String
-password: String (handled by Passport Local Mongoose)
-Item
-name: String
-price: Number
-image: String (path to the uploaded image)
-Purchase
-cname: String (Customer username)
-itemname: String
-price: Number
-Customer
-name: String
-email: String
-phone: String
-Dependencies
-Backend
-Express: Fast, unopinionated, minimalist web framework for Node.js.
-Mongoose: Elegant MongoDB object modeling for Node.js.
-Passport: Simple and secure authentication middleware for Node.js.
-Passport-Local: Username and password authentication strategy for Passport.js.
-Multer: Middleware for handling multipart/form-data (for image uploads).
-Frontend
-React: A JavaScript library for building user interfaces.
-Axios: Promise-based HTTP client for the browser and Node.js.
-Screenshots
-Home Page
+1. Navigate to the `client` folder:
+   ```bash
+   cd client
+   ```
 
-Add Item Page
+2. Install frontend dependencies:
+   ```bash
+   npm install
+   ```
 
-Purchase Item
+3. Start the React app:
+   ```bash
+   npm start
+   ```
 
-Contributing
+   The React frontend will run on `http://localhost:3001`.
+
+## Usage
+
+- Visit `http://localhost:3001` to access the application.
+- **Home Page**: You can view available items. If logged in, you can add items to the store.
+- **Register/Login**: Create an account and log in to purchase items.
+- **Add Items**: Authenticated users can add items with a name, price, and image.
+
+### Routes
+
+#### Backend API
+
+- `GET /items`: Fetch all items available in the store.
+- `POST /add-item`: Add a new item (Admin only, requires authentication).
+- `POST /purchase`: Purchase an item (Requires authentication).
+- `GET /login`: Show the login form.
+- `POST /login`: Handle user login.
+- `GET /register`: Show the registration form.
+- `POST /register`: Handle user registration.
+- `GET /logout`: Log out the user.
+
+## Models
+
+### User
+
+- **username**: String
+- **password**: String (handled by Passport Local Mongoose)
+
+### Item
+
+- **name**: String
+- **price**: Number
+- **image**: String (path to the uploaded image)
+
+### Purchase
+
+- **cname**: String (Customer username)
+- **itemname**: String
+- **price**: Number
+
+### Customer
+
+- **name**: String
+- **email**: String
+- **phone**: String
+
+## Dependencies
+
+### Backend
+
+- **Express**: Fast, unopinionated, minimalist web framework for Node.js.
+- **Mongoose**: Elegant MongoDB object modeling for Node.js.
+- **Passport**: Simple and secure authentication middleware for Node.js.
+- **Passport-Local**: Username and password authentication strategy for Passport.js.
+- **Multer**: Middleware for handling `multipart/form-data` (for image uploads).
+
+### Frontend
+
+- **React**: A JavaScript library for building user interfaces.
+- **Axios**: Promise-based HTTP client for the browser and Node.js.
+
+## Screenshots
+
+### Home Page
+![Home Page](path-to-screenshot.png)
+
+### Add Item Page
+![Add Item Page](path-to-screenshot.png)
+
+### Purchase Item
+![Purchase Item](path-to-screenshot.png)
+
+## Contributing
+
 If you'd like to contribute to this project, please fork the repository and submit a pull request. For any questions, feel free to open an issue.
 
-License
-This project is licensed under the MIT License - see the LICENSE file for details.
+## License
 
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+---
