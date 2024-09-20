@@ -48,7 +48,7 @@ This is a simple full-stack e-commerce web application, similar to Amazon, where
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/jaheer037/amazon-clone-project.git
+   git clone https://github.com/zaheer037/amazon-clone-project.git
    ```
 
 2. Install backend dependencies:
